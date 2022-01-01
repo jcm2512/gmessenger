@@ -5,6 +5,12 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import SearchIcon from "@mui/icons-material/Search";
 
 function Sidebar() {
+  const createChat = () => {
+    const input = prompt("Please enter email address of chat recipient");
+  };
+
+  if (!input) return null;
+
   return (
     <Container>
       <Header>
@@ -23,7 +29,7 @@ function Sidebar() {
         <SearchIcon />
         <SearchInput placeholder="Search in chats" />
       </Search>
-      <SidebarButton>Start a new chat</SidebarButton>
+      <SidebarButton onClick={createChat}>Start a new chat</SidebarButton>
 
       {/* List of chats */}
     </Container>
