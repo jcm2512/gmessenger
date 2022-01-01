@@ -3,13 +3,18 @@ import styled from "styled-components";
 import ChatIcon from "@mui/icons-material/Chat";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import SearchIcon from "@mui/icons-material/Search";
+import * as EmailValidator from "email-validator";
 
 function Sidebar() {
   const createChat = () => {
     const input = prompt("Please enter email address of chat recipient");
-  };
 
-  if (!input) return null;
+    if (!input) return null;
+
+    if (EmailValidator.validate(input)) {
+      // Add chat to CB collection
+    }
+  };
 
   return (
     <Container>
