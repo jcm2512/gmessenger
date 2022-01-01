@@ -1,17 +1,24 @@
+import { ThreeBounce } from "better-react-spinkit";
+
 function Loading() {
   return (
-    <center>
-      <div>
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/LINE_logo.svg/512px-LINE_logo.svg.png"
-          alt=""
-          style={{
-            marginBottom: 10,
-          }}
-          height={200}
-        />
+    <main
+      style={{
+        display: "grid",
+        placeItems: "center",
+        height: "100vh",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <ThreeBounce color="#00C854" size={30} />
       </div>
-    </center>
+    </main>
   );
 }
 
